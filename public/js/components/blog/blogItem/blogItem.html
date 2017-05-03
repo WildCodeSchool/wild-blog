@@ -16,7 +16,9 @@
             <!-- <span class="card-date" ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))"> -->
             <p class="card-date">
                 <!-- "class="datepicker"  -->
-                Publié le {{$ctrl.post.publishedAt | date: "dd-MM-yyyy"}}
+                <span ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))">
+                   Publié le {{$ctrl.post.publishedAt | date: "dd-MM-yyyy"}}
+                 </span>
                 <!-- Display input for editing post.publishedAt only if editable and in edit mode -->
                 <input type="date" ng-if="($ctrl.editable && $ctrl.editMode)" ng-model="$ctrl.post.publishedAt" placeholder="publishedAt">
                 <!-- Switch -->
