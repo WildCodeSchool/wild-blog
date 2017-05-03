@@ -10,6 +10,11 @@ module.exports = (app) => {
     let ctrl = new PostsController();
 
     //GET (for READ)  method
+    // app.get('/posts/search?publish', (req, res, next) => {
+    //     return ctrl.findPublished(req, res, next)
+    //     console.log("I am in route/posts  app.get('/posts' ");
+    // })
+    // //GET (for READ)  method
     app.get('/posts', (req, res, next) => {
         return ctrl.find(req, res, next)
     })

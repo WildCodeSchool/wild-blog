@@ -9,7 +9,8 @@ export default ['$http', class PostsService {
 
     get() {
         // HTTP Request method GET to our express API
-        return this.$http.get('/api/posts')
+        // return this.$http.get('/api/posts')
+        return this.$http.get('/api/posts/?publish=true')
     }
     getById(id) {
         // HTTP Request method GET with param (post id) to our express API

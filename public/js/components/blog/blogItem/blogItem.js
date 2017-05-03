@@ -86,12 +86,6 @@ let blogItem = {
             return (this.user.bookmarks.find((post_id) => post_id.id === this.post._id))
         }
 
-        this.isPublished = () => {
-          var checkbox = this.mycheckbox;
-           return  checkbox.checked
-          console.log("checkbox.checked", checkbox.checked);
-      }
-
         this.addOrRemoveToBookmark = () => {
             // Try to find post in bookmarks
             let postFound = this.user.bookmarks.find((post) => post.id === this.post._id)
