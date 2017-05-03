@@ -35,6 +35,7 @@ let blogItem = {
                 PostsService.getById($stateParams.id).then((res) => {
                     // when this request receives response we affect response data to this controller variable post
                     this.post = res.data;
+                    this.post.publishedAt = new Date(this.post.publishedAt)
                     // save into initialPost a copy of this post (used for undo)
                     initialPost = angular.copy(this.post)
                 })
@@ -42,6 +43,7 @@ let blogItem = {
         } else {
             //If $stateParams.id doesn't exist we change state to app.blog.list (redirection to list)
             $state.go('blog.list')
+            console.log("redirect to blog.list");
         }
 
         // Create delete function.

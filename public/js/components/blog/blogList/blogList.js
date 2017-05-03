@@ -22,7 +22,7 @@ let blogList = {
             this.posts = res.data
         }).catch((err) => {
             this.posts = [{
-                title: "Hello There", 
+                title: "Hello There",
                 content: "I am an intersting article. There was an error by the way because API doesn't exist yet"
             }]
         })
@@ -33,7 +33,6 @@ let blogList = {
             // Add 3 to startIndex
             this.startIndex += 3
         }
-
     }]
 }
 

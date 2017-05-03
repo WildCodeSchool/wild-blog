@@ -16,6 +16,14 @@ export default ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($s
             abstract: true,
             template: '<navbar /><div class="container"><ui-view></ui-view></div>'
         })
+        .state('algo1', {
+          url: '/algo1/',
+          template: '<algo1></algo1>',
+          controller: ['Algo1Service', "$stateParams", '$state', function(Algo1Service, $stateParams, $state) {
+            $state.go('algo1')
+
+          }]
+        })
         .state('callback', {
             url: '/auth/callback/:token',
             template: '',
