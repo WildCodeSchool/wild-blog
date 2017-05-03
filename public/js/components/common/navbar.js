@@ -1,3 +1,6 @@
+
+import moment from 'moment';
+
 let navbar = {
     templateUrl: 'js/components/common/navbar.html',
     controller: ['UsersService', '$state', function(UsersService, $state) {
@@ -19,6 +22,12 @@ let navbar = {
             }
 
         })
+        let moment = require('moment');
+        this.currentDate = moment()
+
+        this.curentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+          console.log("this.curentTime", this.curentTime);
+
     }]
 }
 
