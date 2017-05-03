@@ -14,12 +14,22 @@
 
             <!-- Display post.publishedAt if this component is not editable or editable and not in edit mode -->
             <!-- <span class="card-date" ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))"> -->
-            <p class="card-date" >
-              <!-- "class="datepicker"  -->
-              Publié le {{$ctrl.post.publishedAt | date: "dd-MM-yyyy"}}
-            <!-- Display input for editing post.publishedAt only if editable and in edit mode -->
-            <input type="date" ng-if="($ctrl.editable && $ctrl.editMode)" ng-model="$ctrl.post.publishedAt" placeholder="publishedAt">
-          </p>
+            <p class="card-date">
+                <!-- "class="datepicker"  -->
+                Publié le {{$ctrl.post.publishedAt | date: "dd-MM-yyyy"}}
+                <!-- Display input for editing post.publishedAt only if editable and in edit mode -->
+                <input type="date" ng-if="($ctrl.editable && $ctrl.editMode)" ng-model="$ctrl.post.publishedAt" placeholder="publishedAt">
+                <!-- Switch -->
+                <div class="switch" ng-if="($ctrl.editable && $ctrl.editMode)">
+                    <label>
+                      Off
+                      <input id="mycheckbox" type="checkbox" ng-model="$ctrl.mycheckbox">
+                      <span class="lever"></span>
+                      On
+                    </label>
+                </div>
+                <a ng-click="$ctrl.isPublished()">published</a>
+            </p>
 
             <!-- Display post.content if this component is not editable or editable and not in edit mode -->
             <div ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))">
@@ -43,6 +53,7 @@
                 <!-- Change icon from post.isFav value -->
                 <i class="material-icons pull-right">{{($ctrl.isFav() ? 'turned_in' : 'turned_in_not')}}</i>
             </a>
+
         </div>
     </div>
 </div>
