@@ -89,8 +89,7 @@ let blogItem = {
           var checkbox = this.mycheckbox;
           alert('checkbox value: ' + checkbox.checked);
           console.log("checkbox.checked", checkbox.checked);
-
-        }
+      }
 
 
 
