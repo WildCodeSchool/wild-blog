@@ -87,12 +87,9 @@ let blogItem = {
 
         this.isPublished = () => {
           var checkbox = this.mycheckbox;
-          alert('checkbox value: ' + checkbox.checked);
+           return  checkbox.checked
           console.log("checkbox.checked", checkbox.checked);
       }
-
-
-
 
         this.addOrRemoveToBookmark = () => {
             // Try to find post in bookmarks
