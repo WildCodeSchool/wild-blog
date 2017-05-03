@@ -14,7 +14,11 @@ export default ['$http', class PostsService {
     }
     getById(id) {
         // HTTP Request method GET with param (post id) to our express API
-        return this.$http.get('/api/posts/' + id)
+        // if (   ) {
+          return this.$http.get('/api/posts/' + id)
+        // } else {
+            // console.log("« Article not published yet » ");
+        //}
     }
     save(post) {
         if (post._id) {

@@ -43,6 +43,7 @@ let blogItem = {
         } else {
             //If $stateParams.id doesn't exist we change state to app.blog.list (redirection to list)
             $state.go('blog.list')
+            console.log("redirect to blog.list");
         }
 
         // Create delete function.
