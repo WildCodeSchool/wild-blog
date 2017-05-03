@@ -5,7 +5,7 @@ Create Angular component blogItemMenu into module app.blog with databindings pro
 - onEdit : function
 - onDelete : function
 - onSave : function
-About bindings: 
+About bindings:
 http://stackoverflow.com/questions/37818740/use-of-symbols-and-in-custom-directives-scope-binding-angula
 */
 let blogItemMenu = {
