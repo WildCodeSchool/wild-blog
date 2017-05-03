@@ -18,7 +18,7 @@ export default ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($s
         })
         .state('algo1', {
           url: '/algo1/',
-          template: '',
+          template: '<algo1></algo1>',
           controller: ['Algo1Service', "$stateParams", '$state', function(Algo1Service, $stateParams, $state) {
             $state.go('algo1')
 

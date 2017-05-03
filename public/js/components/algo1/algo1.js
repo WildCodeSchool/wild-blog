@@ -23,13 +23,18 @@ let algo1 = {
             }
         } )
 
-        let friends = ["Ryan", "Kieran", "Mark"]
-        let isFriend = [];
-            friends.forEach( function( y ) {
-                if ( y.length === 4 ) { isFriend.push( y ) }
-            } )
-        console.log("I have this friends: ", isFriend );
-
+        function friend(friends){
+          //your code here
+          // for each friend in array friends
+          //  test if lenght = 4 then push it in return array
+          let isFriend = [];
+          friends.forEach(function(y) {
+            if (y.length === 4) { isFriend.push(y)}
+                })
+            return  isFriend ;
+        }
+        this.myFriend = friend(["Ryan", "Kieran", "Mark"]);
+        console.log("I have this friends: ", this.myFriend );
 
     } ]
 }
