@@ -25,12 +25,11 @@
                 <div class="switch" ng-if="($ctrl.editable && $ctrl.editMode)">
                     <label>
                       Off
-                      <input id="mycheckbox" type="checkbox" ng-model="$ctrl.mycheckbox"> 
+                      <input id="mycheckbox" type="checkbox" ng-model="$ctrl.post.publish">
                       <span class="lever"></span>
                       On
                     </label>
                 </div>
-                <a ng-click="$ctrl.isPublished()">published</a>
             </p>
 
             <!-- Display post.content if this component is not editable or editable and not in edit mode -->

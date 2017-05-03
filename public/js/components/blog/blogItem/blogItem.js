@@ -43,6 +43,7 @@ let blogItem = {
         } else {
             //If $stateParams.id doesn't exist we change state to app.blog.list (redirection to list)
             $state.go('blog.list')
+            console.log("redirect to blog.list");
         }
 
         // Create delete function.
@@ -85,12 +86,6 @@ let blogItem = {
             if (!this.post) return
             return (this.user.bookmarks.find((post_id) => post_id.id === this.post._id))
         }
-
-        this.isPublished = () => {
-          var checkbox = this.mycheckbox;
-           return  checkbox.checked
-          console.log("checkbox.checked", checkbox.checked);
-      }
 
         this.addOrRemoveToBookmark = () => {
             // Try to find post in bookmarks
